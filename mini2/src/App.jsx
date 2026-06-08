@@ -1,10 +1,13 @@
 import UseStateBasics from './UseStateBasics'
+import UseStateObjects from './UseStateObjects'
 
 function App() {
 
   return (
     <>
-    <UseStateBasics/>     
+    <UseStateBasics/>  
+    <br />
+    <UseStateObjects />   
              
     </>
   )
