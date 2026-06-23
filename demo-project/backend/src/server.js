@@ -14,6 +14,10 @@ connectDB()
 app.use(cors({
     origin: "http://localhost:5173",
 }))
+
+app.use(express.static('dist'))
+
+
 app.use(express.json()) // this middleware will parse JSON bodies:req.body
 app.use(rateLimiter)
 
