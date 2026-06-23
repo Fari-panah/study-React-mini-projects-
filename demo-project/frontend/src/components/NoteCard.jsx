@@ -15,11 +15,13 @@ const NoteCard = ({note, setNotes}) => {
       return
     try {
      await api.delete(`/notes/${id}`)
+
      //after deleting the note, I want immedietlly delete that without refresh the page
      //Notes are saved in arry,so from homePage I called setNotes to filter array, because deleted note
      //React doesnt update immedietly states so needs callback update function
-     setNotes(prev => prev.filter(note => note._id !== id))
+     setNotes(prev => prev.filter(note => note.id !== id))
      toast.success("Note deleted successfully")
+
       
     } catch (error) {
       console.log("error in handleDelete", error);
